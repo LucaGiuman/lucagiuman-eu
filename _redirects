@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects
+
+# Forza HTTPS (Cloudflare lo fa di default ma per sicurezza)
+http://lucagiuman.eu/* https://lucagiuman.eu/:splat 301!
+
+# Forza dominio canonico (senza www)
+https://www.lucagiuman.eu/* https://lucagiuman.eu/:splat 301!
+
+# Vecchi URL Google Sites se necessari (placeholder per redirect futuri)
+# /old-page /new-page 301

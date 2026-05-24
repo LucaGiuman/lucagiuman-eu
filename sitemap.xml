@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://lucagiuman.eu/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://lucagiuman.eu/assets/og-image.png</image:loc>
+      <image:title>Luca Giuman — L'IA come ambiente cognitivo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://lucagiuman.eu/assets/luca-giuman.png</image:loc>
+      <image:title>Luca Giuman</image:title>
+    </image:image>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://lucagiuman.eu/privacy/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Note legali -->
+  <url>
+    <loc>https://lucagiuman.eu/note-legali/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

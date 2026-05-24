@@ -1,0 +1,28 @@
+{
+  "name": "Luca Giuman — L'IA come ambiente cognitivo",
+  "short_name": "Luca Giuman",
+  "description": "Luca Giuman si occupa di intelligenza artificiale dal 1985. CEO di SerenDPT, membro del CDA di EGGON, autore di due opere sull'IA come ambiente cognitivo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A0C10",
+  "theme_color": "#0A0C10",
+  "lang": "it-IT",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "books"]
+}

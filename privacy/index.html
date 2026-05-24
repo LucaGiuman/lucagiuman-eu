@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy <em>Policy</em> — Luca Giuman</title>
+<meta name="description" content="Documento legale — Privacy <em>Policy</em> del sito personale di Luca Giuman.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lucagiuman.eu/privacy/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lucagiuman.eu/privacy/">
+<meta property="og:title" content="Privacy <em>Policy</em> — Luca Giuman">
+<meta property="og:description" content="Documento legale — Privacy <em>Policy</em> del sito personale di Luca Giuman.">
+<meta property="og:image" content="https://lucagiuman.eu/assets/og-image.png">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Luca Giuman">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy <em>Policy</em> — Luca Giuman">
+<meta name="twitter:description" content="Documento legale — Privacy <em>Policy</em> del sito personale di Luca Giuman.">
+<meta name="twitter:image" content="https://lucagiuman.eu/assets/og-image.png">
+
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-deepest: #050608;
+    --bg: #0A0C10;
+    --text: #F5F3ED;
+    --text-muted: #B5B0A3;
+    --text-faint: #6B6862;
+    --text-faintest: #3D3B36;
+    --border: rgba(180, 175, 160, 0.12);
+    --border-strong: rgba(180, 175, 160, 0.25);
+    --accent-cyan: #7DD3D8;
+    --accent-violet: #A78BD9;
+    --accent-cyan-dim: rgba(125, 211, 216, 0.35);
+    --accent-violet-dim: rgba(167, 139, 217, 0.3);
+    --moonlight: #E8E2D0;
+    --serif: 'Spectral', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --max-width: 1320px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-deepest);
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+  .bg-image {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("/assets/sfondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.4;
+    filter: contrast(0.95) brightness(0.8);
+  }
+  .bg-veil {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at top, rgba(10,12,16,0.4) 0%, rgba(10,12,16,0.9) 60%, rgba(5,6,8,0.97) 100%),
+      linear-gradient(180deg, rgba(5,6,8,0.5) 0%, rgba(5,6,8,0.8) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  header, main { position: relative; z-index: 10; }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,6,8,0.92);
+    backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  .brand-mark {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin-right: 14px;
+    box-shadow: 0 0 20px rgba(125, 211, 216, 0.15);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  nav a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: color 0.3s;
+  }
+  nav a:hover, nav a.current { color: var(--accent-cyan); }
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .legal-page {
+    padding: 100px 0 120px;
+    min-height: calc(100vh - 200px);
+  }
+  .legal-header {
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .legal-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 12px var(--accent-cyan-dim);
+  }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--accent-cyan);
+  }
+  h1.legal-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    color: var(--moonlight);
+  }
+  h1.legal-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent-violet);
+  }
+  .legal-update {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-faint);
+    margin-top: 32px;
+  }
+  .legal-content {
+    max-width: 760px;
+  }
+  .legal-content h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--accent-cyan);
+    margin: 56px 0 16px;
+    letter-spacing: -0.01em;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content h2:first-of-type { margin-top: 0; }
+  .legal-content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 12px;
+    height: 1px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan-dim);
+  }
+  .legal-content p {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-weight: 300;
+  }
+  .legal-content a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-cyan-dim);
+    transition: all 0.3s;
+  }
+  .legal-content a:hover {
+    border-bottom-color: var(--accent-cyan);
+  }
+  .legal-back {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-back a {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--accent-cyan);
+  }
+  footer {
+    background: var(--bg-deepest);
+    padding: 60px 0 32px;
+    border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+  }
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--text-faint);
+  }
+  .footer-inner a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-faintest);
+  }
+  .footer-inner a:hover { color: var(--accent-cyan); }
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--bg-deepest);
+    color: var(--accent-cyan);
+    padding: 12px 20px;
+    z-index: 1000;
+    border: 1px solid var(--accent-cyan);
+    font-family: var(--mono);
+    font-size: 12px;
+    text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 16px; left: 16px; }
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    .header-inner { padding: 20px 24px; }
+    nav ul { display: none; }
+    nav .nav-back { display: flex; }
+    h1.legal-title { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Salta al contenuto principale</a>
+
+<div class="bg-image" aria-hidden="true" role="presentation"></div>
+<div class="bg-veil" aria-hidden="true" role="presentation"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">LG</span>Luca Giuman
+    </a>
+    <nav aria-label="Navigazione principale">
+      <ul>
+        <li><a href="/#opere">Opere</a></li>
+        <li><a href="/#diario">Diario</a></li>
+        <li><a href="/#about">Chi sono</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="legal-page">
+  <div class="container">
+    <div class="legal-header">
+      <div class="section-eyebrow">Documento legale</div>
+      <h1 class="legal-title">Privacy <em>Policy</em></h1>
+      <div class="legal-update">Ultimo aggiornamento: maggio 2026</div>
+    </div>
+    <div class="legal-content">
+      <h2>Titolare del trattamento</h2>
+<p>Luca Giuman<br>Padova (Veneto), Italia<br>Email per esercitare i diritti: <a href="mailto:gmnlcu.supervisor@gmail.com">gmnlcu.supervisor@gmail.com</a></p>
+
+<h2>Natura del sito</h2>
+<p>Il sito lucagiuman.eu è uno spazio personale di divulgazione. Raccoglie e indicizza pubblicazioni che vivono altrove: articoli su LinkedIn, opere in PDF, apparizioni mediatiche di terzi.</p>
+
+<h2>Trattamento dei dati</h2>
+<p>Il sito è statico e non raccoglie dati personali. Non sono presenti moduli di contatto, sistemi di registrazione, login, o aree riservate. Il sito non profila gli utenti né esegue tracciamenti.</p>
+
+<h2>Cookie</h2>
+<p>Il sito non utilizza cookie propri di alcun tipo, né cookie di profilazione di terze parti.</p>
+
+<h2>Servizi terzi utilizzati</h2>
+<p>Il sito è ospitato su Cloudflare Pages. Cloudflare può raccogliere automaticamente log tecnici (indirizzo IP, user agent, timestamp) per finalità di sicurezza, prevenzione frodi e analisi delle prestazioni del servizio di hosting.</p>
+
+<p>Il sito utilizza Cloudflare Web Analytics, un sistema di statistiche di traffico privacy-first che non utilizza cookie, non profila gli utenti e non raccoglie dati personali identificativi. Vengono registrati esclusivamente dati aggregati e anonimi: numero di visualizzazioni, pagine viste, paese di provenienza, tipo di dispositivo. I dati non sono condivisi con terze parti.</p>
+
+<p>Per dettagli: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">policy Cloudflare ↗</a> e <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Web Analytics ↗</a></p>
+
+<p>I caratteri tipografici utilizzati sono ospitati direttamente sul sito, senza chiamate a CDN esterne.</p>
+
+<h2>Link esterni</h2>
+<p>Il sito contiene link verso piattaforme terze (LinkedIn, SerenDPT, EGGON, Luminosi Giorni, YouTube e altre). Cliccando su un link l'utente lascia lucagiuman.eu e accede a siti governati da policy proprie. Il titolare del sito non risponde dei trattamenti effettuati dai siti di destinazione.</p>
+
+<h2>Diritti dell'interessato</h2>
+<p>Ai sensi degli articoli da 15 a 22 del Regolamento UE 2016/679 (GDPR), l'utente può esercitare in ogni momento i diritti di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione. Le richieste vanno inviate via email a <a href="mailto:gmnlcu.supervisor@gmail.com">gmnlcu.supervisor@gmail.com</a> e ricevono risposta entro 30 giorni. È inoltre possibile presentare reclamo all'Autorità Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it ↗</a>).</p>
+
+<h2>Modifiche</h2>
+<p>Il presente documento può essere aggiornato. La data di ultimo aggiornamento è indicata in apertura.</p>
+
+<h2>Foro competente</h2>
+<p>Per ogni controversia relativa al sito si elegge competente il Foro di Padova.</p>
+      <div class="legal-back">
+        <a href="/">← Torna alla home</a>
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© MMXXVI · Luca Giuman</div>
+    <div><a href="/privacy/">Privacy</a> · <a href="/note-legali/">Note legali</a></div>
+  </div>
+</footer>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_TOKEN_PLACEHOLDER"}'></script>
+</body>
+</html>

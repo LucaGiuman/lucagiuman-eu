@@ -1,0 +1,18 @@
+# Cloudflare Pages headers — sicurezza e performance
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pdf/*
+  Cache-Control: public, max-age=604800
+  X-Robots-Tag: noindex
+
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
