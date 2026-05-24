@@ -1535,6 +1535,41 @@
   }
   .skip-link:focus { top: 16px; left: 16px; outline: 2px solid var(--accent-cyan); }
 
+
+  .opera-cover-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .opera-cover-link:hover {
+    transform: translateY(-4px);
+  }
+  .opera-cover-link:hover .book-cover {
+    box-shadow:
+      0 4px 8px rgba(0,0,0,0.4),
+      0 32px 80px -16px rgba(0,0,0,0.6),
+      0 0 60px rgba(125, 211, 216, 0.2);
+  }
+  .opera-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 6px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  .opera-pdf::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-left: 1px solid var(--accent-cyan);
+    border-bottom: 1px solid var(--accent-cyan);
+    transform: rotate(-45deg) translateY(-2px);
+    margin-right: 4px;
+  }
+
 </style>
 </head>
 <body>
@@ -1601,39 +1636,43 @@
     </div>
 
     <div class="opere-grid">
-      <a class="opera-card opera-1" href="#" onclick="return false">
-        <div class="book-cover">
-          <div class="book-cover-frame"></div>
-          <div class="book-cover-top">
-            <span>2024</span><span>Versione 1.0</span>
+      <div class="opera-card opera-1">
+        <a class="opera-cover-link" href="/pdf/libro-versione-1.pdf" target="_blank" rel="noopener" aria-label="Apri PDF: Quando la tecnologia smette di essere uno strumento">
+          <div class="book-cover">
+            <div class="book-cover-frame"></div>
+            <div class="book-cover-top">
+              <span>2024</span><span>Versione 1.0</span>
+            </div>
+            <div class="book-cover-title">Quando la tecnologia smette di essere uno strumento</div>
+            <div class="book-cover-bottom">Luca Giuman</div>
           </div>
-          <div class="book-cover-title">Quando la tecnologia smette di essere uno strumento</div>
-          <div class="book-cover-bottom">Luca Giuman</div>
-        </div>
+        </a>
         <div class="opera-meta">
           <span>Saggio narrativo</span><span>5 Atti</span>
         </div>
         <div class="opera-title">Quando la tecnologia smette di essere uno strumento</div>
         <div class="opera-subtitle">Una prima esplorazione dell'IA come ambiente abitato, in registro narrativo ed esperienziale.</div>
-        <span class="opera-link">Leggi il libro →</span>
-      </a>
+        <a class="opera-link opera-pdf" href="/pdf/libro-versione-1.pdf" target="_blank" rel="noopener">↓ Scarica PDF</a>
+      </div>
 
-      <a class="opera-card opera-2" href="#" onclick="return false">
-        <div class="book-cover variant-2">
-          <div class="book-cover-frame"></div>
-          <div class="book-cover-top">
-            <span>2025</span><span>Progetto IA 2</span>
+      <div class="opera-card opera-2">
+        <a class="opera-cover-link" href="/pdf/forza-ambiente-liberta.pdf" target="_blank" rel="noopener" aria-label="Apri PDF: Forza, Ambiente, Libertà">
+          <div class="book-cover variant-2">
+            <div class="book-cover-frame"></div>
+            <div class="book-cover-top">
+              <span>2025</span><span>Progetto IA 2</span>
+            </div>
+            <div class="book-cover-title"><em>Forza,</em><br>Ambiente,<br><em>Libertà</em></div>
+            <div class="book-cover-bottom">L'IA come ambiente cognitivo</div>
           </div>
-          <div class="book-cover-title"><em>Forza,</em><br>Ambiente,<br><em>Libertà</em></div>
-          <div class="book-cover-bottom">L'IA come ambiente cognitivo</div>
-        </div>
+        </a>
         <div class="opera-meta">
           <span>Trattato teorico</span><span>16 Capitoli</span>
         </div>
         <div class="opera-title"><em>Forza, Ambiente, Libertà</em></div>
         <div class="opera-subtitle">La dimostrazione formale: definizioni, lemmi, teorema centrale, corollari.</div>
-        <span class="opera-link">Leggi il libro →</span>
-      </a>
+        <a class="opera-link opera-pdf" href="/pdf/forza-ambiente-liberta.pdf" target="_blank" rel="noopener">↓ Scarica PDF</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1770,7 +1809,7 @@
           <ul>
             <li><a href="https://www.serendpt.net" target="_blank" rel="noopener">SerenDPT Srl SB<span class="ext-icon">↗</span></a></li>
             <li><a href="https://eggon.co" target="_blank" rel="noopener">EGGON Srl<span class="ext-icon">↗</span></a></li>
-            <li><a href="#" onclick="return false">Intervista · La Piazza Web (PDF)<span class="ext-icon">↗</span></a></li>
+            <li><a href="/pdf/intervista-la-piazza-web.pdf" target="_blank" rel="noopener">Intervista · La Piazza Web (PDF)<span class="ext-icon">↗</span></a></li>
             <li><a href="https://it.linkedin.com/in/lucagiuman" target="_blank" rel="noopener">LinkedIn<span class="ext-icon">↗</span></a></li>
           </ul>
         </div>
