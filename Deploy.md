@@ -12,7 +12,7 @@ ________________
 ┌─────────────────────────────────────────────────────────┐
 
 
-│ Visitatore (browser)                                     │
+│ Visitatore (browser)                                    │
 
 
 └─────────────────────────────────────────────────────────┘
@@ -24,19 +24,19 @@ ________________
 ┌─────────────────────────────────────────────────────────┐
 
 
-│ Cloudflare CDN (edge node geograficamente più vicino)    │
+│ Cloudflare CDN (edge node geograficamente più vicino)   │
 
 
-│ - SSL/TLS Let's Encrypt                                  │
+│ - SSL/TLS Let's Encrypt                                 │
 
 
-│ - DDoS protection                                        │
+│ - DDoS protection                                       │
 
 
-│ - Caching                                                │
+│ - Caching                                               │
 
 
-│ - Web Analytics                                          │
+│ - Web Analytics                                         │
 
 
 └─────────────────────────────────────────────────────────┘
@@ -48,13 +48,13 @@ ________________
 ┌─────────────────────────────────────────────────────────┐
 
 
-│ Cloudflare Pages                                         │
+│ Cloudflare Pages                                        │
 
 
-│ - Sito statico servito direttamente                      │
+│ - Sito statico servito direttamente                     │
 
 
-│ - Deploy automatico da GitHub                            │
+│ - Deploy automatico da GitHub                           │
 
 
 └─────────────────────────────────────────────────────────┘
@@ -66,13 +66,13 @@ ________________
 ┌─────────────────────────────────────────────────────────┐
 
 
-│ GitHub repository (lucagiuman-eu)                        │
+│ GitHub repository (lucagiuman-eu)                       │
 
 
-│ - Sorgente del sito                                      │
+│ - Sorgente del sito                                     │
 
 
-│ - Branch main = produzione                               │
+│ - Branch main = produzione                              │
 
 
 └─────────────────────────────────────────────────────────┘
