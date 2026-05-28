@@ -63,6 +63,8 @@
     position: relative;
     min-height: 100vh;
   }
+  html { overflow-x: hidden; max-width: 100%; }
+  img { max-width: 100%; height: auto; }
   .bg-image {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -306,12 +308,41 @@
     transition: top 0.2s;
   }
   .skip-link:focus { top: 16px; left: 16px; }
+  /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+  @media (max-width: 1024px) {
+    .container { padding: 0 28px; }
+  }
+
   @media (max-width: 768px) {
-    .container { padding: 0 24px; }
-    .header-inner { padding: 20px 24px; }
-    nav ul { display: none; }
-    nav .nav-back { display: flex; }
-    h1.legal-title { font-size: 36px; }
+    .container { padding: 0 28px; }
+    .header-inner { padding: 18px 28px; }
+    .legal-page { padding: 80px 0 100px; }
+    nav ul { gap: 20px; }
+    nav a { font-size: 10px; letter-spacing: 0.15em; }
+    h1.legal-title { font-size: clamp(32px, 8vw, 48px); }
+    .legal-content h2 { font-size: 21px; }
+    .legal-content p { font-size: 16px; }
+  }
+
+  @media (max-width: 560px) {
+    .container { padding: 0 20px; }
+    .header-inner { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+    .brand { font-size: 16px; }
+    .brand-mark { width: 32px; height: 32px; font-size: 13px; margin-right: 10px; }
+    nav ul { gap: 16px; flex-wrap: wrap; }
+    nav a { font-size: 9px; }
+    .legal-page { padding: 60px 0 80px; }
+    .legal-header { padding-bottom: 36px; margin-bottom: 48px; }
+    .legal-content h2 { font-size: 20px; margin: 40px 0 14px; }
+  }
+
+  @media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .header-inner { padding: 14px 16px; }
+    .brand { font-size: 14px; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 8px; letter-spacing: 0.1em; }
+    .legal-content p { font-size: 15px; }
   }
 </style>
 </head>
@@ -379,6 +410,6 @@
   </div>
 </footer>
 
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3350264285234d1fb180776240da1caf"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_TOKEN_PLACEHOLDER"}'></script>
 </body>
 </html>
