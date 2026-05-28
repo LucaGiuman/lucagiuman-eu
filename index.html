@@ -187,6 +187,10 @@
     position: relative;
   }
 
+  /* Protezione globale anti-overflow orizzontale */
+  html { overflow-x: hidden; max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+
   /* ---------- BACKGROUND IMAGE FIXED ---------- */
   .bg-image {
     position: fixed;
@@ -1020,7 +1024,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--serif);
-    font-size: 132px;
+    font-size: clamp(64px, 11vw, 132px);
     font-weight: 300;
     letter-spacing: -0.04em;
     font-style: italic;
@@ -1083,7 +1087,7 @@
 
   .about-content p:first-child::first-letter {
     font-family: var(--serif);
-    font-size: 96px;
+    font-size: clamp(56px, 9vw, 96px);
     font-weight: 300;
     font-style: italic;
     float: left;
@@ -1142,7 +1146,7 @@
 
   .stat-num {
     font-family: var(--serif);
-    font-size: 64px;
+    font-size: clamp(40px, 7vw, 64px);
     font-weight: 300;
     line-height: 1;
     margin-bottom: 12px;
@@ -1299,6 +1303,19 @@
   .footer-bottom strong { color: var(--accent-cyan); font-weight: 400; }
 
   /* ---------- RESPONSIVE ---------- */
+  /* ============================================================
+     RESPONSIVE BREAKPOINTS — refactoring completo
+     Strategia: fluido di base (clamp/%) + breakpoint adattivi
+     1200 / 1024 / 768 / 560 / 380
+     ============================================================ */
+
+  /* ---------- 1200px — laptop / desktop piccoli ---------- */
+  @media (max-width: 1200px) {
+    .container { padding: 0 32px; }
+    .opere-grid { gap: 48px; }
+  }
+
+  /* ---------- 1024px — tablet landscape ---------- */
   @media (max-width: 1024px) {
     .opere-grid { gap: 40px; }
     .opera-1 { grid-column: 1 / span 6; }
@@ -1309,29 +1326,37 @@
     }
     .articles-sidebar, .about-side { position: static; }
     .container { padding: 0 28px; }
+    .marginalia { display: none; }
+    .section-marker { gap: 32px; }
   }
 
+  /* ---------- 768px — tablet portrait ---------- */
   @media (max-width: 768px) {
     .marginalia, .page-counter { display: none; }
     section { padding: 100px 0; }
-    .container { padding: 0 24px; }
+    .container { padding: 0 28px; }
+    .header-inner { padding: 18px 28px; }
     .hero { padding-top: 140px; padding-bottom: 100px; min-height: auto; }
-    .hero h1 { font-size: 44px; }
+    .hero-marker { margin-bottom: 40px; gap: 14px; }
+    .hero-marker::before, .hero-marker::after { flex: 0 0 32px; }
+    .hero-bio { font-size: 18px; padding-left: 24px; }
     .hero-coords, .hero-sigil { position: static; margin-top: 48px; }
     .hero-sigil { display: none; }
     .section-marker {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 24px;
     }
     .section-aside { text-align: left; max-width: 100%; padding-bottom: 0; }
-    .section-number { font-size: 96px; }
     .opera-1, .opera-2 { grid-column: 1 / -1; margin-top: 0; }
     .opere-grid { gap: 64px; }
+    .book-cover { max-width: 100%; }
     .article-row {
       grid-template-columns: 1fr;
       gap: 8px;
     }
     .article-row::before { display: none; }
+    .article-date { font-size: 12px; }
+    .article-meta { margin-top: 4px; }
     nav ul { display: none; }
     nav ul.mobile-open {
       display: flex;
@@ -1344,14 +1369,63 @@
       padding: 28px;
       min-width: 240px;
       gap: 20px;
+      z-index: 200;
     }
     .mobile-menu-btn { display: block; }
     .avatar { width: 200px; height: 200px; font-size: 96px; }
-    .about-content p:first-child::first-letter { font-size: 64px; }
-    .footer-top { grid-template-columns: 1fr; gap: 40px; }
-    .footer-statement { font-size: 24px; }
-    .stats-row { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
-    .stat-num { font-size: 48px; }
+    .avatar-photo { width: 200px; height: 200px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-statement { font-size: 24px; grid-column: 1 / -1; }
+    .stats-row { grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 40px 0; }
+    .filters-wrap { flex-direction: column; align-items: stretch; }
+    .sort-control { justify-content: flex-start; }
+    /* touch target piu' grandi */
+    .filter-btn, .sort-btn, .filter-toggle { padding-top: 10px; padding-bottom: 10px; }
+  }
+
+  /* ---------- 560px — mobile large ---------- */
+  @media (max-width: 560px) {
+    section { padding: 80px 0; }
+    .container { padding: 0 20px; }
+    .header-inner { padding: 16px 20px; }
+    .brand { font-size: 16px; }
+    .brand-mark { width: 32px; height: 32px; font-size: 13px; margin-right: 10px; }
+    .hero { padding-top: 120px; padding-bottom: 80px; }
+    .hero-marker { font-size: 10px; letter-spacing: 0.25em; margin-bottom: 32px; }
+    .hero-bio { font-size: 17px; padding-left: 20px; }
+    .section-number { margin-bottom: 8px; }
+    .opere-grid { gap: 48px; }
+    .opera-meta { font-size: 10px; }
+    .opera-title { font-size: 22px; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .footer-statement { font-size: 21px; }
+    .stats-row { grid-template-columns: 1fr; gap: 28px; padding: 32px 0; }
+    .diary-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .about-content p:first-child::first-letter { font-size: clamp(48px, 14vw, 64px); }
+    .legal-content p, .about-content p { font-size: 16px; }
+  }
+
+  /* ---------- 380px — mobile small (iPhone SE, compatti) ---------- */
+  @media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .header-inner { padding: 14px 16px; }
+    .brand { font-size: 15px; }
+    .brand span:not(.brand-mark) { display: inline; }
+    .hero { padding-top: 104px; }
+    .hero-bio { font-size: 16px; padding-left: 16px; }
+    .opera-title { font-size: 20px; }
+    .opera-subtitle { font-size: 15px; }
+    .avatar, .avatar-photo { width: 160px; height: 160px; }
+    .avatar { font-size: 72px; }
+    .diary-stats { gap: 8px; }
+    .diary-stat strong { font-size: 24px; }
+    .filter-btn, .sort-btn { font-size: 9px; padding-left: 10px; padding-right: 10px; }
+    .footer-statement { font-size: 19px; }
+  }
+
+  /* ---------- Larghi: cap su ultrawide ---------- */
+  @media (min-width: 1800px) {
+    :root { --max-width: 1440px; }
   }
 
   .filters-wrap {
@@ -1484,6 +1558,7 @@
 
   .avatar-photo {
     width: 300px;
+    max-width: 100%;
     height: 300px;
     position: relative;
     margin-bottom: 40px;
@@ -2018,7 +2093,7 @@ updateOnScroll();
 </script>
 
 <!-- Cloudflare Web Analytics (token verrà inserito al deploy) -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3350264285234d1fb180776240da1caf"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_TOKEN_PLACEHOLDER"}'></script>
 
 </body>
 </html>
