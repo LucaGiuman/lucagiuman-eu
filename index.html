@@ -1347,8 +1347,12 @@
       gap: 24px;
     }
     .section-aside { text-align: left; max-width: 100%; padding-bottom: 0; }
-    .opera-1, .opera-2 { grid-column: 1 / -1; margin-top: 0; }
-    .opere-grid { gap: 64px; }
+    .opere-grid {
+      grid-template-columns: 1fr;
+      gap: 64px;
+    }
+    .opera-1, .opera-2 { grid-column: 1; margin-top: 0; }
+    .book-cover { padding: 40px 28px; }
     .book-cover { max-width: 100%; }
     .article-row {
       grid-template-columns: 1fr;
@@ -1397,6 +1401,10 @@
     .opere-grid { gap: 48px; }
     .opera-meta { font-size: 10px; }
     .opera-title { font-size: 22px; }
+    .book-cover { padding: 32px 20px; }
+    .book-cover-frame { top: 14px; left: 14px; right: 14px; bottom: 14px; }
+    .book-cover-top { font-size: 10px; }
+    .book-cover-title { font-size: 26px; line-height: 1.15; }
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     .footer-statement { font-size: 21px; }
     .stats-row { grid-template-columns: 1fr; gap: 28px; padding: 32px 0; }
@@ -1415,6 +1423,9 @@
     .hero-bio { font-size: 16px; padding-left: 16px; }
     .opera-title { font-size: 20px; }
     .opera-subtitle { font-size: 15px; }
+    .book-cover { padding: 24px 16px; }
+    .book-cover-frame { top: 10px; left: 10px; right: 10px; bottom: 10px; }
+    .book-cover-title { font-size: 22px; }
     .avatar, .avatar-photo { width: 160px; height: 160px; }
     .avatar { font-size: 72px; }
     .diary-stats { gap: 8px; }
