@@ -144,6 +144,57 @@
 }
 </script>
 
+
+<!-- Schema.org FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Chi è Luca Giuman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luca Giuman è un esperto di intelligenza artificiale attivo dal 1985. È CEO di SerenDPT, membro del CDA di EGGON, e autore di due opere sull'IA come ambiente cognitivo. Vive e lavora tra Padova e Venezia, nel Veneto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Di cosa si occupa Luca Giuman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luca Giuman sviluppa una tesi originale: l'intelligenza artificiale non è uno strumento ma un ambiente cognitivo che modifica lo spazio in cui pensiamo, decidiamo e agiamo. Ha pubblicato due opere su questo tema e produce articoli ogni due settimane su LinkedIn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa sono le opere di Luca Giuman sull'IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luca Giuman ha pubblicato due opere in formato PDF: 'Quando la tecnologia smette di essere uno strumento' (2024), saggio narrativo in cinque atti, e 'Forza, Ambiente, Libertà' (2025), trattato teorico in sedici capitoli che dimostra formalmente come l'IA operi come forza naturale generando un ambiente cognitivo. Entrambe sono scaricabili gratuitamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa si intende per IA come ambiente cognitivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'IA come ambiente cognitivo è la tesi centrale del lavoro di Luca Giuman: l'intelligenza artificiale non è più uno strumento che usiamo, ma una condizione strutturale in cui siamo immersi. Come la gravità o il linguaggio, modifica le possibilità di pensiero, le decisioni possibili e il perimetro della libertà individuale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come contattare Luca Giuman?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luca Giuman è raggiungibile via LinkedIn all'indirizzo linkedin.com/in/lucagiuman, oppure via email a gmnlcu.supervisor@gmail.com per richieste GDPR. Il suo lavoro intellettuale è pubblicato su lucagiuman.eu."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -426,6 +477,18 @@
     padding: 0 12px;
     opacity: 0.5;
     text-shadow: 0 0 12px var(--accent-cyan-dim);
+  }
+
+
+  .hero-byline {
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--accent-violet);
+    margin-bottom: 24px;
+    opacity: 0.85;
+    text-shadow: 0 0 12px rgba(167, 139, 217, 0.3);
   }
 
   /* ---------- HERO ---------- */
@@ -1413,6 +1476,20 @@
     .legal-content p, .about-content p { font-size: 16px; }
   }
 
+
+  /* ---------- 480px — mobile medium ---------- */
+  @media (max-width: 480px) {
+    .container { padding: 0 18px; }
+    .hero { padding-top: 112px; }
+    .hero-bio { font-size: 16px; padding-left: 18px; }
+    .opera-title { font-size: 21px; }
+    .book-cover { padding: 28px 18px; }
+    .book-cover-title { font-size: 24px; }
+    .stats-row { grid-template-columns: 1fr; gap: 24px; padding: 28px 0; }
+    .diary-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .filter-btn, .sort-btn { font-size: 9px; padding-left: 10px; padding-right: 10px; }
+  }
+
   /* ---------- 380px — mobile small (iPhone SE, compatti) ---------- */
   @media (max-width: 380px) {
     .container { padding: 0 16px; }
@@ -1694,6 +1771,7 @@
 <section class="hero" id="intro" data-section="00" data-title="Soglia">
   <div class="container">
     <div class="hero-marker">Pensiero · Ricerca · Sull'IA dal 1985</div>
+    <p class="hero-byline" aria-label="Autore">Luca Giuman</p>
     <h1>L'intelligenza artificiale<br>non è uno strumento.<br>È <em>un ambiente</em><br>che si <strong>abita</strong>.</h1>
     <p class="hero-bio">
       Luca Giuman si occupa di intelligenza artificiale dal 1985. CEO di SerenDPT e membro del CDA di EGGON, propone un approccio all'IA come ambiente cognitivo, sviluppato in due opere e in una produzione editoriale continuativa.
@@ -1824,16 +1902,21 @@
       <div class="section-number"><em>III.</em></div>
       <div class="section-title-block">
         <div class="section-eyebrow">Capitolo 03 — Biografia</div>
-        <h2 class="section-title">Chi<br><em>sono.</em></h2>
+        <h2 class="section-title">Chi è<br><em>Luca Giuman.</em></h2>
       </div>
       <div class="section-aside">
-        Una traiettoria di quarant'anni con l'intelligenza artificiale.
+        Luca Giuman · Padova, Veneto · Esperto di IA dal 1985.
       </div>
     </div>
 
     <div class="about-grid">
       <div class="about-side">
-        <div class="avatar-photo"><img src="/assets/luca-giuman.png" alt="Luca Giuman" loading="lazy"></div>
+        <div class="avatar-photo">
+            <picture>
+              <source srcset="/assets/luca-giuman.webp" type="image/webp">
+              <img src="/assets/luca-giuman.png" alt="Luca Giuman, CEO SerenDPT — esperto di intelligenza artificiale dal 1985" loading="lazy" width="300" height="300">
+            </picture>
+          </div>
         <div class="about-quickfacts">
           <strong>Luca Giuman</strong>
           Padova · Veneto<br>
@@ -1938,7 +2021,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© <strong>MMXXVI</strong> · Luca Giuman</div>
+      <div>© <strong>MMXXVI</strong> · Luca Giuman · <time datetime="2026-05-23">Aggiornato mag 2026</time></div>
       <div><strong>49 articoli</strong> · 2 opere · <a href="/privacy/" style="color:var(--text-faint);text-decoration:none;border-bottom:1px solid var(--text-faintest)">Privacy</a> · <a href="/note-legali/" style="color:var(--text-faint);text-decoration:none;border-bottom:1px solid var(--text-faintest)">Note legali</a></div>
     </div>
   </div>
@@ -2104,7 +2187,7 @@ updateOnScroll();
 </script>
 
 <!-- Cloudflare Web Analytics (token verrà inserito al deploy) -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_TOKEN_PLACEHOLDER"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3350264285234d1fb180776240da1caf"}'></script>
 
 </body>
 </html>
