@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background: #0a0a0a; color: #f0ece4; font-family: Inter, system-ui, sans-serif; overflow: hidden; }
+    html, body { height: 100%; background: #0a0a0a; color: #f0ece4; font-family: Inter, system-ui, sans-serif; }
 
     #reader-header {
       position: fixed;
@@ -49,55 +49,40 @@
       opacity: 0.85;
     }
 
-    #pdf-container {
-      position: fixed;
-      top: 56px; left: 0; right: 0; bottom: 0;
-    }
-    #pdf-frame {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-      overflow: auto;
+    #pdf-scroll {
+      margin-top: 56px;
+      min-height: calc(100vh - 56px);
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      background: #1a1a1a;
     }
-    #pdf-fallback {
+
+    .pdf-page {
+      display: block;
+      max-width: 100%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    #pdf-status {
+      color: rgba(240,236,228,0.5);
+      font-size: 0.85rem;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    #pdf-error {
       display: none;
       padding: 3rem 2rem;
       text-align: center;
       line-height: 1.7;
-      color: rgba(240,236,228,0.7);
-    }
-    #pdf-fallback a { color: #f0ece4; }
-
-    /* iOS: niente iframe, pulsante nativo */
-    #ios-open {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      gap: 1.25rem;
-      padding: 2rem;
-      text-align: center;
-    }
-    #ios-open p {
       color: rgba(240,236,228,0.6);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      max-width: 280px;
     }
-    #ios-open a {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #f0ece4;
-      padding: 0.75rem 1.75rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    #ios-open a:hover { background: rgba(255,255,255,0.18); }
+    #pdf-error a { color: #f0ece4; }
   </style>
 </head>
 <body>
@@ -108,18 +93,15 @@
   <a id="btn-download" class="btn" href="#" download>↓ Scarica</a>
 </header>
 
-<div id="pdf-container">
-  <iframe id="pdf-frame" src="" title="PDF" allowfullscreen></iframe>
-  <div id="pdf-fallback">
-    <p>Il PDF non si carica nel browser.<br>
-    <a id="fallback-link" href="#">Apri direttamente il PDF ↗</a></p>
-  </div>
-  <div id="ios-open">
-    <p>Su iPhone il PDF si apre nel visualizzatore nativo di Safari, con paginazione completa.</p>
-    <a id="ios-open-link" href="#">Apri PDF ↗</a>
+<div id="pdf-scroll">
+  <div id="pdf-status">Caricamento PDF…</div>
+  <div id="pdf-error">
+    <p>Il PDF non si carica.<br>
+    <a id="fallback-link" href="#">Apri direttamente ↗</a></p>
   </div>
 </div>
 
+<script src="/assets/js/pdf.min.js"></script>
 <script>
 (function() {
   const opere = {
@@ -144,20 +126,15 @@
   const slug = params.get('opera');
   const opera = opere[slug];
 
-  if (!opera) {
-    location.href = '/';
-    return;
-  }
+  if (!opera) { location.href = '/'; return; }
 
-  // Title & meta
-  const titolo = opera.titolo;
-  document.getElementById('page-title').textContent = titolo + ' — Luca Giuman';
-  document.getElementById('page-desc').content = titolo + ' di Luca Giuman.';
-  document.getElementById('reader-title').textContent = titolo;
+  // Meta
+  document.getElementById('page-title').textContent = opera.titolo + ' — Luca Giuman';
+  document.getElementById('page-desc').content = opera.titolo + ' di Luca Giuman.';
+  document.getElementById('reader-title').textContent = opera.titolo;
 
   // Back button
-  const btnBack = document.getElementById('btn-back');
-  btnBack.addEventListener('click', function(e) {
+  document.getElementById('btn-back').addEventListener('click', function(e) {
     e.preventDefault();
     const ref = document.referrer;
     if (ref && new URL(ref).origin === location.origin) {
@@ -172,29 +149,52 @@
   btnDownload.href = opera.pdf;
   btnDownload.download = opera.filename;
 
-  // Fallback link
+  // Fallback
   document.getElementById('fallback-link').href = opera.pdf;
 
-  // iOS: niente iframe, apri PDF nel visualizzatore nativo Safari
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const frame = document.getElementById('pdf-frame');
+  // PDF.js
+  const pdfjsLib = window['pdfjs-dist/build/pdf'];
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdf.worker.min.js';
 
-  if (isIOS) {
-    frame.style.display = 'none';
-    const iosOpen = document.getElementById('ios-open');
-    const iosLink = document.getElementById('ios-open-link');
-    iosLink.href = opera.pdf;
-    iosLink.target = '_blank';
-    iosLink.rel = 'noopener';
-    iosOpen.style.display = 'flex';
-  } else {
-    // Desktop e Android: iframe diretto, nessun dato a terze parti
-    frame.src = opera.pdf;
-    frame.addEventListener('error', function() {
-      frame.style.display = 'none';
-      document.getElementById('pdf-fallback').style.display = 'block';
-    });
-  }
+  const scroll = document.getElementById('pdf-scroll');
+  const status = document.getElementById('pdf-status');
+
+  pdfjsLib.getDocument(opera.pdf).promise.then(function(pdf) {
+    status.remove();
+    const total = pdf.numPages;
+
+    // Calcola larghezza disponibile
+    const maxW = Math.min(scroll.clientWidth - 24, 900);
+
+    function renderPage(n) {
+      return pdf.getPage(n).then(function(page) {
+        const viewport = page.getViewport({ scale: 1 });
+        const scale = maxW / viewport.width;
+        const scaled = page.getViewport({ scale });
+
+        const canvas = document.createElement('canvas');
+        canvas.className = 'pdf-page';
+        canvas.width = scaled.width;
+        canvas.height = scaled.height;
+        scroll.appendChild(canvas);
+
+        return page.render({
+          canvasContext: canvas.getContext('2d'),
+          viewport: scaled
+        }).promise;
+      });
+    }
+
+    // Renderizza pagine in sequenza
+    (function renderNext(n) {
+      if (n > total) return;
+      renderPage(n).then(function() { renderNext(n + 1); });
+    })(1);
+
+  }).catch(function() {
+    status.style.display = 'none';
+    document.getElementById('pdf-error').style.display = 'block';
+  });
 })();
 </script>
 
