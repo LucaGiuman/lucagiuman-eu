@@ -1833,7 +1833,7 @@
 
     <div class="opere-grid">
       <div class="opera-card opera-1">
-        <a class="opera-cover-link" href="/pdf/libro-versione-1.pdf" target="_blank" rel="noopener" aria-label="Apri PDF: Quando la tecnologia smette di essere uno strumento">
+        <a class="opera-cover-link" href="/leggi.html?opera=libro-versione-1&titolo=Quando+la+tecnologia+smette+di+essere+uno+strumento" aria-label="Leggi: Quando la tecnologia smette di essere uno strumento">
           <div class="book-cover">
             <div class="book-cover-frame"></div>
             <div class="book-cover-top">
@@ -1852,7 +1852,7 @@
       </div>
 
       <div class="opera-card opera-2">
-        <a class="opera-cover-link" href="/pdf/forza-ambiente-liberta.pdf" target="_blank" rel="noopener" aria-label="Apri PDF: Forza, Ambiente, Libertà">
+        <a class="opera-cover-link" href="/leggi.html?opera=forza-ambiente-liberta&titolo=Forza%2C+Ambiente%2C+Libert%C3%A0" aria-label="Leggi: Forza, Ambiente, Libertà">
           <div class="book-cover variant-2">
             <div class="book-cover-frame"></div>
             <div class="book-cover-top">
@@ -2099,66 +2099,40 @@ const articles = [
   { data: "2025-11-29", titolo: "Perché insegnare ai bambini a dialogare con l'AI è la nuova alfabetizzazione cognitiva", estratto: "La competenza più urgente per il futuro dei nostri figli non è la programmazione, ma il «Dialogo Consapevole con l'AI». Non una corsa contro il tempo, ma un invito a forgiare sognatori consapevoli. Metodi, non solo strumenti.", tag: ["educazione"], url: "https://www.linkedin.com/pulse/luca-giuman-ai-educazione-luca-giuman-5spgf" },
   { data: "2025-12-06", titolo: "L'IA non è tecnologia: è una forza naturale che cambia l'ambiente in cui pensiamo", estratto: "E se l'IA non fosse una tecnologia, ma una nuova forza naturale che sta modificando l'ambiente in cui la mente umana si muove? Non parliamo più di uno strumento, ma di una condizione. Non di un mezzo, ma di un ecosistema.", tag: ["ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-icsmf" },
   { data: "2025-12-20", titolo: "Non stiamo usando l'IA. Stiamo già vivendo al suo interno.", estratto: "C'è una credenza diffusa che regge ancora buona parte del discorso pubblico sull'IA: l'idea che sia uno strumento che usiamo per ottenere risultati più rapidi. La realtà è un'altra: ogni giorno l'interazione con sistemi generativi non è più un uso, è un abitare.", tag: ["ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/ceo-serendpt-board-member-eggon-luca-giuman-vlk7f" },
-  { data: "2026-01-03", titolo: "L'IA non è un cavallo più veloce: è la nostra automobile cognitiva", estratto: "Ogni volta che parliamo di IA, la domanda implicita è: «quanto ci farà andare più veloce?». È la domanda sbagliata. L'IA non è un cavallo più veloce. È qualcosa che cambia l'orizzonte stesso entro cui possiamo muoverci, pensare e creare.", tag: ["ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-hqxxf" },
-  { data: "2026-01-17", titolo: "Come restare noi stessi quando l'IA pensa insieme a noi", estratto: "Ogni salto tecnologico ha generato un cambiamento nel nostro modo di essere. La scrittura ha cambiato la memoria. La stampa ha cambiato il sapere. Internet ha cambiato la relazione con l'informazione. L'IA sta cambiando qualcosa di ancora più intimo: il nostro modo di pensare.", tag: ["ambiente-cognitivo", "responsabilità"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-nb6yf" },
-  { data: "2026-01-31", titolo: "Il vero skill del futuro? Parlare all'IA per pensare meglio", estratto: "Ogni era ha avuto una competenza che sembrava marginale all'inizio e che poi si è rivelata decisiva. La scrittura. La lettura. L'alfabetizzazione digitale. Oggi sta accadendo di nuovo. La competenza chiave dell'era dell'IA non è quella che pensiamo.", tag: ["educazione", "ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-vmqff" },
-  { data: "2026-02-14", titolo: "L'IA sta estendendo la nostra mente: cosa significa per la nostra identità?", estratto: "Siamo abituati a pensare all'IA come a una tecnologia, a un insieme di algoritmi, a uno strumento evoluto. Ma questa visione sta già diventando insufficiente. Ciò che sta realmente accadendo è più profondo: la nostra mente si sta estendendo oltre i confini del cervello.", tag: ["ambiente-cognitivo", "coscienza-relazione"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-bfqof" },
-  { data: "2026-02-28", titolo: "Chi decide davvero quando l'IA propone le opzioni", estratto: "«Ho deciso io, ho solo scelto tra le opzioni dell'IA». Ma la decisione non è la scelta finale. È il momento in cui accetti quali opzioni esistono e quali restano invisibili. Se non sai indicare quando hai deciso davvero, stavi scegliendo dentro un frame già dato.", tag: ["responsabilità"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-mlsqf" },
-  { data: "2026-03-14", titolo: "L'errore che nessuno vuole più firmare", estratto: "«L'IA riduce l'errore umano». Forse. Ma spesso rende l'errore senza firma. Quando una decisione è «supportata dai dati» ma nessuno è disposto a firmarla da solo, l'errore non è sparito: è diventato invisibile. Il vero rischio non è sbagliare. È non sapere chi risponde.", tag: ["responsabilità"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-jw0of" },
-  { data: "2026-03-28", titolo: "Quando avere più opzioni diventa una fuga dalla scelta", estratto: "«Facciamo ancora un'ultima simulazione». Spesso non è prudenza. È una fuga dalla scelta. L'IA rende facile aprire possibilità. Decidere, invece, significa chiuderle — e accettare una perdita. Se non sai dire quando l'esplorazione è finita, non stai decidendo.", tag: ["responsabilità"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-yr4ef" },
-  { data: "2026-04-11", titolo: "La responsabilità non si può distribuire", estratto: "C'è una formula che sta diventando sempre più comune: decisione data-driven, decisione AI-assisted, scelta supportata dall'IA. Sono espressioni rassicuranti, suggeriscono che la responsabilità sia distribuita. È qui che si annida un'illusione pericolosa.", tag: ["responsabilità", "governance"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-0jbef" },
-  { data: "2026-04-25", titolo: "Chi decide cosa è possibile pensare", estratto: "«L'IA è neutra. Conta come la usiamo». Davvero? Se non ti chiedi quali idee non possono emergere, stai già pensando dentro un perimetro che non hai scelto. Non è solo ciò che l'IA dice. È ciò che non può dirti.", tag: ["governance", "ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-0qtaf" },
-  { data: "2026-05-09", titolo: "Le regole invisibili dell'ambiente cognitivo", estratto: "«L'IA è uno strumento. Basta saperla usare». Davvero? Se non vedi le regole, non hai controllo. Stai solo navigando bene dentro un sistema che decide cosa è possibile. Il problema non è la risposta. È ciò che non può emergere.", tag: ["ambiente-cognitivo", "governance"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-gqwuf" },
-  { data: "2026-05-23", titolo: "Autonomia o protezione: qualcuno sta già decidendo per te", estratto: "«Meglio un'IA più sicura». Sì. Ma a quale prezzo? Ogni protezione esclude qualcosa. Se non sai cosa stai sacrificando, non stai scegliendo. Stai accettando un equilibrio deciso da altri.", tag: ["governance", "libertà"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-ijirf" },
+  { data: "2026-01-03", titolo: "L'IA non è un cavallo più veloce: è la nostra automobile cognitiva", estratto: "Ogni volta che parliamo di IA, la domanda implicita è: «quanto ci farà andare più veloce?». È la domanda sbagliata. L'IA non è un cavallo più veloce. È qualcosa che cambia l'orizzonte stesso entro cui possiamo muoverci, pensare e creare.", tag: ["ambiente-cognitivo"], url: "https://www.linkedin.com/pulse/luca-giuman-ceo-serendpt-board-member-eggon-luca-giuman-automobile-cognitiva" }
 ];
 
-function formatDate(iso) {
-  const months = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
-  const d = new Date(iso);
-  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+let activeTag = 'all';
+let activeSort = 'desc';
+
+function fmt(d) {
+  const [y,m,dd] = d.split('-');
+  const mesi = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  return `${parseInt(dd)} ${mesi[parseInt(m)-1]} ${y}`;
 }
 
-let currentSort = 'desc';
-let currentFilter = 'all';
-
 function renderArticles() {
+  let filtered = activeTag === 'all' ? [...articles] : articles.filter(a => a.tag.includes(activeTag));
+  if (activeSort === 'desc') filtered.reverse();
   const container = document.getElementById('all-articles');
-  let filtered = currentFilter === 'all' ? [...articles] : articles.filter(a => a.tag.includes(currentFilter));
-
-  // Ordinamento
-  filtered.sort((a, b) => {
-    if (currentSort === 'desc') return b.data.localeCompare(a.data);
-    return a.data.localeCompare(b.data);
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = '<p style="font-family: var(--serif); font-size: 18px; color: var(--text-muted); padding: 40px 0; font-style: italic;">Nessun articolo per questo tag.</p>';
-    return;
-  }
   container.innerHTML = filtered.map(a => `
-    <article>
     <a class="article-row" href="${a.url}" target="_blank" rel="noopener">
-      <div class="article-date">${formatDate(a.data)}</div>
+      <span class="article-date">${fmt(a.data)}</span>
       <div>
         <div class="article-title">${a.titolo}</div>
         <div class="article-excerpt">${a.estratto}</div>
         <div class="article-tags">${a.tag.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       </div>
-      <div class="article-meta">LinkedIn ↗</div>
+      <span class="article-meta">LinkedIn ↗</span>
     </a>
-    </article>
   `).join('');
-}
-
-function toggleExtraFilters() {
-  document.querySelector('.filters').classList.toggle('show-extra');
 }
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentFilter = btn.dataset.tag;
+    activeTag = btn.dataset.tag;
     renderArticles();
   });
 });
@@ -2167,61 +2141,51 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentSort = btn.dataset.sort;
+    activeSort = btn.dataset.sort;
     renderArticles();
   });
 });
 
-const sections = document.querySelectorAll('section, footer');
-const navLinks = document.querySelectorAll('nav a[data-nav]');
-const header = document.getElementById('header');
-const marginalia = document.getElementById('marg-left');
-const pageCounter = document.getElementById('page-counter');
-
-function updateOnScroll() {
-  let current = null;
-  const scrollY = window.scrollY + 250;
-
-  sections.forEach(sec => {
-    if (sec.offsetTop <= scrollY) current = sec;
-  });
-
-  if (!current) return;
-
-  const sectionId = current.id;
-  const sectionNum = current.dataset.section;
-  const sectionTitle = current.dataset.title;
-
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId);
-  });
-
-  header.classList.toggle('scrolled', window.scrollY > 60);
-
-  if (sectionTitle) {
-    marginalia.textContent = `Luca Giuman · ${sectionTitle}`;
-    pageCounter.textContent = `§ ${sectionNum || '00'} · ${sectionTitle}`;
-  }
+function toggleExtraFilters() {
+  document.querySelector('.filters').classList.toggle('show-extra');
 }
-
-window.addEventListener('scroll', updateOnScroll, { passive: true });
 
 function toggleMobileMenu() {
   document.getElementById('navList').classList.toggle('mobile-open');
 }
 
-document.querySelectorAll('nav a, .brand').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navList').classList.remove('mobile-open');
-  });
+// Header scroll
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
 });
 
-renderArticles();
-updateOnScroll();
-</script>
+// Section observer for marginalia & nav
+const sections = document.querySelectorAll('section[data-section]');
+const navLinks = document.querySelectorAll('nav a[data-nav]');
+const margLeft = document.getElementById('marg-left');
+const pageCounter = document.getElementById('page-counter');
 
-<!-- Cloudflare Web Analytics (token verrà inserito al deploy) -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3350264285234d1fb180776240da1caf"}'></script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const s = entry.target;
+      const num = s.dataset.section;
+      const title = s.dataset.title || '';
+      if (margLeft) margLeft.textContent = 'Luca Giuman · ' + title;
+      if (pageCounter) pageCounter.textContent = '§ ' + num + ' · ' + title;
+      navLinks.forEach(l => {
+        l.classList.toggle('active', l.dataset.nav === s.id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => observer.observe(s));
+
+renderArticles();
+</script>
 
 </body>
 </html>
