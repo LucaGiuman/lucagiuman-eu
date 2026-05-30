@@ -69,6 +69,35 @@
       color: rgba(240,236,228,0.7);
     }
     #pdf-fallback a { color: #f0ece4; }
+
+    /* iOS: niente iframe, pulsante nativo */
+    #ios-open {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 1.25rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    #ios-open p {
+      color: rgba(240,236,228,0.6);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+    #ios-open a {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #f0ece4;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    #ios-open a:hover { background: rgba(255,255,255,0.18); }
   </style>
 </head>
 <body>
@@ -84,6 +113,10 @@
   <div id="pdf-fallback">
     <p>Il PDF non si carica nel browser.<br>
     <a id="fallback-link" href="#">Apri direttamente il PDF ↗</a></p>
+  </div>
+  <div id="ios-open">
+    <p>Su iPhone il PDF si apre nel visualizzatore nativo di Safari, con paginazione completa.</p>
+    <a id="ios-open-link" href="#">Apri PDF ↗</a>
   </div>
 </div>
 
@@ -142,14 +175,26 @@
   // Fallback link
   document.getElementById('fallback-link').href = opera.pdf;
 
-  // Load PDF via Google Docs Viewer (funziona su iOS/Android, tutte le pagine)
+  // iOS: niente iframe, apri PDF nel visualizzatore nativo Safari
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   const frame = document.getElementById('pdf-frame');
-  const pdfUrl = 'https://lucagiuman.eu' + opera.pdf;
-  frame.src = 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfUrl) + '&embedded=true';
-  frame.addEventListener('error', function() {
+
+  if (isIOS) {
     frame.style.display = 'none';
-    document.getElementById('pdf-fallback').style.display = 'block';
-  });
+    const iosOpen = document.getElementById('ios-open');
+    const iosLink = document.getElementById('ios-open-link');
+    iosLink.href = opera.pdf;
+    iosLink.target = '_blank';
+    iosLink.rel = 'noopener';
+    iosOpen.style.display = 'flex';
+  } else {
+    // Desktop e Android: iframe diretto, nessun dato a terze parti
+    frame.src = opera.pdf;
+    frame.addEventListener('error', function() {
+      frame.style.display = 'none';
+      document.getElementById('pdf-fallback').style.display = 'block';
+    });
+  }
 })();
 </script>
 
