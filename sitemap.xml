@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
-
   <!-- Home -->
   <url>
     <loc>https://lucagiuman.eu/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +16,27 @@
       <image:title>Luca Giuman</image:title>
     </image:image>
   </url>
-
+  <!-- Opera 1 — Quando la tecnologia smette di essere uno strumento (2024) -->
+  <url>
+    <loc>https://lucagiuman.eu/pdf/libro-versione-1.pdf</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Opera 2 — Forza, Ambiente, Libertà (2025) -->
+  <url>
+    <loc>https://lucagiuman.eu/pdf/forza-ambiente-liberta.pdf</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Intervista — La Piazza Web -->
+  <url>
+    <loc>https://lucagiuman.eu/pdf/intervista-la-piazza-web.pdf</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <!-- Privacy Policy -->
   <url>
     <loc>https://lucagiuman.eu/privacy/</loc>
@@ -26,7 +44,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <!-- Note legali -->
   <url>
     <loc>https://lucagiuman.eu/note-legali/</loc>
@@ -34,5 +51,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
 </urlset>
