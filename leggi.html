@@ -144,10 +144,19 @@
     }
   });
 
-  // Download
+  // Download — su iOS Safari ignora l'attributo download e naviga via;
+  // usiamo window.open() che apre Safari fuori dalla PWA lasciandola intatta
   const btnDownload = document.getElementById('btn-download');
-  btnDownload.href = opera.pdf;
-  btnDownload.download = opera.filename;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS) {
+    btnDownload.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open(opera.pdf, '_blank', 'noopener');
+    });
+  } else {
+    btnDownload.href = opera.pdf;
+    btnDownload.download = opera.filename;
+  }
 
   // Fallback
   document.getElementById('fallback-link').href = opera.pdf;
