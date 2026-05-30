@@ -99,6 +99,11 @@
       pdf: '/pdf/forza-ambiente-liberta.pdf',
       titolo: 'Forza, Ambiente, Libertà',
       filename: 'luca-giuman-forza-ambiente-liberta.pdf'
+    },
+    'intervista-la-piazza-web': {
+      pdf: '/pdf/intervista-la-piazza-web.pdf',
+      titolo: 'Intervista · La Piazza Web',
+      filename: 'luca-giuman-intervista-la-piazza-web.pdf'
     }
   };
 
@@ -137,9 +142,10 @@
   // Fallback link
   document.getElementById('fallback-link').href = opera.pdf;
 
-  // Load PDF
+  // Load PDF via Google Docs Viewer (funziona su iOS/Android, tutte le pagine)
   const frame = document.getElementById('pdf-frame');
-  frame.src = opera.pdf;
+  const pdfUrl = 'https://lucagiuman.eu' + opera.pdf;
+  frame.src = 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfUrl) + '&embedded=true';
   frame.addEventListener('error', function() {
     frame.style.display = 'none';
     document.getElementById('pdf-fallback').style.display = 'block';
