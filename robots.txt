@@ -1,9 +1,7 @@
 # robots.txt — lucagiuman.eu
 # https://lucagiuman.eu
-
 User-agent: *
 Allow: /
-Disallow: /pdf/
 
 # Sitemap
 Sitemap: https://lucagiuman.eu/sitemap.xml
