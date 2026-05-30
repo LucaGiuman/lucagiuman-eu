@@ -7,8 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Primary SEO Meta Tags -->
-<title>Luca Giuman — L'IA come ambiente cognitivo</title>
-<meta name="title" content="Luca Giuman — L'IA come ambiente cognitivo">
+<title>Luca Giuman — L'IA come ambiente cognitivo | Esperto IA a Padova e Venezia</title>
+<meta name="title" content="Luca Giuman — L'IA come ambiente cognitivo | Esperto IA a Padova e Venezia">
 <meta name="description" content="Luca Giuman si occupa di intelligenza artificiale dal 1985. CEO di SerenDPT, membro del CDA di EGGON, autore di due opere sull'IA come ambiente cognitivo.">
 <meta name="author" content="Luca Giuman">
 <meta name="keywords" content="Luca Giuman, intelligenza artificiale, IA, ambiente cognitivo, etica IA, governance IA, AI Italia, SerenDPT, EGGON, forza naturale intelligenza artificiale">
@@ -20,6 +20,10 @@
 
 <!-- Canonical -->
 <link rel="canonical" href="https://lucagiuman.eu/">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="it" href="https://lucagiuman.eu/">
+<link rel="alternate" hreflang="x-default" href="https://lucagiuman.eu/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -70,6 +74,16 @@
   ],
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "Università degli Studi di Padova", "url": "https://www.unipd.it"},
   "address": {"@type": "PostalAddress", "addressLocality": "Padova", "addressRegion": "Veneto", "addressCountry": "IT"},
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Padova, Veneto",
+    "geo": {"@type": "GeoCoordinates", "latitude": 45.4064, "longitude": 11.8768}
+  },
+  "workLocation": {
+    "@type": "Place",
+    "name": "Venezia, Veneto",
+    "geo": {"@type": "GeoCoordinates", "latitude": 45.4408, "longitude": 12.3155}
+  },
   "knowsAbout": ["Intelligenza Artificiale", "IA come ambiente cognitivo", "Etica IA", "Governance IA", "Filosofia della tecnologia"],
   "sameAs": ["https://it.linkedin.com/in/lucagiuman", "https://twitter.com/GiumanLuca"],
   "nationality": "Italian"
@@ -100,7 +114,8 @@
   "name": "Quando la tecnologia smette di essere uno strumento",
   "alternativeHeadline": "Una prima esplorazione dell'IA come ambiente abitato",
   "author": {"@id": "https://lucagiuman.eu/#person"},
-  "url": "https://lucagiuman.eu/#opere",
+  "url": "https://lucagiuman.eu/pdf/libro-versione-1.pdf",
+  "datePublished": "2024",
   "description": "Saggio narrativo in cinque atti. Una prima esplorazione dell'IA come ambiente abitato, in registro narrativo ed esperienziale.",
   "inLanguage": "it",
   "encodingFormat": "application/pdf",
@@ -120,7 +135,8 @@
   "name": "Forza, Ambiente, Libertà",
   "alternativeHeadline": "L'IA come ambiente cognitivo",
   "author": {"@id": "https://lucagiuman.eu/#person"},
-  "url": "https://lucagiuman.eu/#opere",
+  "url": "https://lucagiuman.eu/pdf/forza-ambiente-liberta.pdf",
+  "datePublished": "2025",
   "description": "Trattato teorico in sedici capitoli. La dimostrazione formale che l'IA opera come forza naturale e genera un ambiente cognitivo.",
   "inLanguage": "it",
   "encodingFormat": "application/pdf",
@@ -141,6 +157,23 @@
     {"@type": "ListItem", "position": 3, "name": "Diario", "item": "https://lucagiuman.eu/#diario"},
     {"@type": "ListItem", "position": 4, "name": "Chi sono", "item": "https://lucagiuman.eu/#about"}
   ]
+}
+</script>
+
+
+<!-- Schema.org Blog (Diario) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://lucagiuman.eu/#diario",
+  "url": "https://lucagiuman.eu/#diario",
+  "name": "Diario di ricerca sull'IA — Luca Giuman",
+  "description": "Diario di ricerca pubblico sull'IA come ambiente cognitivo: un articolo ogni due settimane. I contenuti integrali sono pubblicati su LinkedIn.",
+  "inLanguage": "it-IT",
+  "author": {"@id": "https://lucagiuman.eu/#person"},
+  "publisher": {"@id": "https://lucagiuman.eu/#person"},
+  "about": ["Intelligenza Artificiale", "IA come ambiente cognitivo", "Governance IA", "Etica IA"]
 }
 </script>
 
@@ -2021,7 +2054,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© <strong>MMXXVI</strong> · Luca Giuman · <time datetime="2026-05-23">Aggiornato mag 2026</time></div>
+      <div>© <strong>MMXXVI</strong> · Luca Giuman · <time datetime="2026-05-29">Aggiornato mag 2026</time></div>
       <div><strong>49 articoli</strong> · 2 opere · <a href="/privacy/" style="color:var(--text-faint);text-decoration:none;border-bottom:1px solid var(--text-faintest)">Privacy</a> · <a href="/note-legali/" style="color:var(--text-faint);text-decoration:none;border-bottom:1px solid var(--text-faintest)">Note legali</a></div>
     </div>
   </div>
@@ -2104,6 +2137,7 @@ function renderArticles() {
     return;
   }
   container.innerHTML = filtered.map(a => `
+    <article>
     <a class="article-row" href="${a.url}" target="_blank" rel="noopener">
       <div class="article-date">${formatDate(a.data)}</div>
       <div>
@@ -2113,6 +2147,7 @@ function renderArticles() {
       </div>
       <div class="article-meta">LinkedIn ↗</div>
     </a>
+    </article>
   `).join('');
 }
 
