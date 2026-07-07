@@ -4,7 +4,7 @@
   <!-- Home -->
   <url>
     <loc>https://lucagiuman.eu/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -29,6 +29,13 @@
     <lastmod>2026-05-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <!-- Saggio breve — Critto-fantasia (2026) -->
+  <url>
+    <loc>https://lucagiuman.eu/pdf/critto-fantasia.pdf</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <!-- Intervista — La Piazza Web -->
   <url>
