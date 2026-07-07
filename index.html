@@ -146,6 +146,27 @@
 }
 </script>
 
+<!-- Schema.org Saggio breve: Critto-fantasia -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://lucagiuman.eu/#saggio-critto-fantasia",
+  "name": "Critto-fantasia",
+  "alternativeHeadline": "Etica dell'immaginare e architetture dell'oblio",
+  "author": {"@id": "https://lucagiuman.eu/#person"},
+  "url": "https://lucagiuman.eu/pdf/critto-fantasia.pdf",
+  "datePublished": "2026-06",
+  "description": "Saggio breve sull'etica dell'immaginazione digitale e sull'oblio come architettura intenzionale, con riferimenti a Nietzsche, Ricœur e Heidegger.",
+  "inLanguage": "it",
+  "encodingFormat": "application/pdf",
+  "isAccessibleForFree": true,
+  "license": "https://lucagiuman.eu/note-legali/",
+  "isPartOf": {"@id": "https://lucagiuman.eu/#person"},
+  "keywords": "intelligenza artificiale, ambiente cognitivo, etica, oblio, privacy"
+}
+</script>
+
 <!-- Schema.org BreadcrumbList -->
 <script type="application/ld+json">
 {
@@ -926,6 +947,83 @@
     font-style: italic;
     line-height: 1.55;
     margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .saggi-block {
+    margin-top: 96px;
+    padding-top: 56px;
+    border-top: 1px solid var(--border);
+  }
+
+  .saggi-heading {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--moonlight);
+    margin-bottom: 14px;
+  }
+
+  .saggi-heading em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent-violet);
+  }
+
+  .saggi-intro {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .saggio-card {
+    display: block;
+    max-width: 440px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border-strong);
+    background: rgba(125, 211, 216, 0.02);
+    padding: 28px 32px;
+    transition: all 0.3s;
+  }
+
+  .saggio-card:hover {
+    border-color: var(--accent-cyan);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px -8px rgba(0,0,0,0.4);
+  }
+
+  .saggio-meta-top {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-cyan);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .saggio-title-text {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--moonlight);
+    margin-bottom: 8px;
+  }
+
+  .saggio-subtitle-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-muted);
     font-weight: 300;
   }
 
@@ -1867,6 +1965,16 @@
         <div class="opera-title"><em>Forza, Ambiente, Libertà</em></div>
         <div class="opera-subtitle">La dimostrazione formale: definizioni, lemmi, teorema centrale, corollari.</div>
       </div>
+    </div>
+
+    <div class="saggi-block">
+      <h3 class="saggi-heading"><em>Saggi</em> brevi</h3>
+      <p class="saggi-intro">Approfondimenti puntuali, più brevi delle due opere maggiori — spesso lo sviluppo di un singolo nodo teorico emerso nel Diario.</p>
+      <a class="saggio-card" href="/leggi.html?opera=critto-fantasia&titolo=Critto-fantasia" aria-label="Leggi: Critto-fantasia — Etica dell'immaginare e architetture dell'oblio">
+        <div class="saggio-meta-top"><span>2026</span><span>Saggio breve</span></div>
+        <div class="saggio-title-text">Critto-fantasia</div>
+        <div class="saggio-subtitle-text">Etica dell'immaginare e architetture dell'oblio</div>
+      </a>
     </div>
   </div>
 </section>
