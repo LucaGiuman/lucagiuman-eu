@@ -1,10 +1,12 @@
 # Cloudflare Pages redirects
 
-# Forza HTTPS (Cloudflare lo fa di default ma per sicurezza)
-http://lucagiuman.eu/* https://lucagiuman.eu/:splat 301!
-
-# Forza dominio canonico (senza www)
-https://www.lucagiuman.eu/* https://lucagiuman.eu/:splat 301!
-
-# Vecchi URL Google Sites se necessari (placeholder per redirect futuri)
-# /old-page /new-page 301
+# NOTA 2026-08-15 — I redirect di dominio NON si fanno qui.
+# Cloudflare Pages supporta solo sorgenti con percorso relativo: le righe che
+# includono schema e hostname (es. https://www.dominio.eu/*) vengono ignorate.
+# Le due regole che stavano qui — forzatura HTTPS e www -> non-www — erano
+# quindi inerti. Ora sono gestite lato Cloudflare:
+#   - HTTPS forzato  -> impostazione "Always Use HTTPS"
+#   - www -> non-www -> Redirect Rule di zona "www -> non-www" (301, query preservata)
+#
+# In questo file vanno solo redirect di percorso, es:
+# /vecchia-pagina /nuova-pagina 301

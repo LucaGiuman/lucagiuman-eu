@@ -159,7 +159,10 @@ Asset SEO
 * robots.txt
 * sitemap.xml
 * _headers (HSTS, X-Frame-Options, Permissions-Policy, cache headers)
-* _redirects (HTTPS forzato, dominio canonico senza www)
+* _redirects (solo redirect di percorso — i redirect di dominio non sono supportati da Pages)
+* Redirect www -> non-www: Redirect Rule di zona, creata 2026-08-15 da modello
+  "Reindirizza da WWW alla radice" (301, conserva stringa di query).
+  Cloudflare avvisa che www potrebbe non essere proxied: avviso errato, ignorare.
 Accessibilità
 * Skip link
 * Aria-label su pulsanti decorativi
@@ -455,7 +458,7 @@ Item
 	Stato
 	Sito live https://lucagiuman.eu
 	✅
-	Sito live https://www.lucagiuman.eu
+	Sito live https://www.lucagiuman.eu (redirige 301 su lucagiuman.eu)
 	✅
 	SSL Let's Encrypt
 	✅
