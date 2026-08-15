@@ -11,7 +11,7 @@ Sito personale di **Luca Giuman** — uno spazio di divulgazione del pensiero su
 Sito statico personale che raccoglie:
 
 - **2 opere editoriali** in formato PDF
-- **49 articoli** pubblicati su LinkedIn (indice ragionato con filtri tematici)
+- **55 articoli** pubblicati su LinkedIn (indice ragionato con filtri tematici)
 - **Profilo professionale** dell'autore
 
 Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai contenuti che vivono altrove (LinkedIn, PDF scaricabili).
