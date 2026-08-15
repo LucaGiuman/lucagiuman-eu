@@ -204,11 +204,16 @@ Step 2 — Cloudflare Pages
 Step 3 — Cloudflare Web Analytics
 1. Analytics & Logs → Web Analytics → Add a site
 2. Hostname: lucagiuman.eu
-3. Token ottenuto e copiato
-4. Token sostituito a CF_TOKEN_PLACEHOLDER in:
-   * index.html
-   * privacy/index.html
-   * note-legali/index.html
+3. Iniezione AUTOMATICA del beacon: attiva lato Cloudflare, e' il default quando si aggiunge
+   un sito in Web Analytics. Non c'e' alcun tag da mettere nei file HTML.
+4. Verificato 2026-08-15 su view-source:https://lucagiuman.eu/ — ultima riga prima di </html>
+   c'e' un loader inline (iframe + beacon.min.js) assente dal file sorgente: e' l'iniezione edge.
+   * Il site tag e' leggibile dall'URL della dashboard Web Analytics, parametro siteTag
+   * CORREZIONE: la versione precedente di questo documento dichiarava il token sostituito nei
+     tre file HTML. Non era vero: index.html non aveva alcun tag, privacy/index.html e
+     note-legali/index.html contenevano la stringa letterale CF_TOKEN_PLACEHOLDER, inerte.
+     Tag rimossi il 2026-08-15. Le analytics funzionavano comunque, via iniezione automatica.
+   * NON aggiungere tag manuali: con l'automatico attivo si conterebbero due volte le visite.
 Step 4 — DNS Cloudflare (trasferimento da OVH)
 1. Cloudflare richiede trasferimento DNS per dominio root .eu (limitazione CNAME su apex)
 2. Add a site su Cloudflare: lucagiuman.eu
