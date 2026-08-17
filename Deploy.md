@@ -1,4 +1,25 @@
 ﻿DEPLOY.md — Storia tecnica del deploy di lucagiuman.eu
+
+
+[DOCUMENTO STORICO — CONGELATO AL 15 AGOSTO 2026]
+
+
+Testimonianza del deploy iniziale e delle correzioni di agosto 2026. NON e' piu' la fonte
+
+
+operativa: le procedure e le configurazioni correnti stanno nei documenti della cartella
+
+
+_progetto/ dentro la cartella di progetto su Drive (Il mio Drive/110 - Progetti/LG - IA Web
+
+
+Site): quadro operativo, manutenzione del Diario, infrastruttura, vincoli, storico.
+
+
+In caso di divergenza vale _progetto/. Aggiornare questo file solo per correggere errori,
+
+
+mai per registrare novita'.
 Documentazione interna del processo di deploy. Non destinata al pubblico, ma utile come memoria operativa per eventuali manutenzioni future, debug, o ricostruzione del setup.
 
 
@@ -291,7 +312,13 @@ Server DNS 1: martin.ns.cloudflare.com
 
 Server DNS 2: sunny.ns.cloudflare.com
 Cloudflare Web Analytics
-Token: [salvato privatamente, presente nei 3 file HTML]
+Token: NON presente nei file HTML. Il beacon e' iniettato automaticamente lato edge
+
+
+(vedi Step 3). Il site tag e' leggibile dall'URL della dashboard Web Analytics,
+
+
+parametro siteTag. NON aggiungere tag manuali: doppio conteggio delle visite.
 
 
 Hostname: lucagiuman.eu
@@ -333,6 +360,12 @@ Aggiungere un articolo al Diario
 
 4. Aggiorna counter footer e diary-stats se conteggio totale cambia
 5. Commit changes → push automatico → deploy Cloudflare 30-60s
+
+
+ATTENZIONE: questa sequenza e' incompleta. La procedura completa (7 passi, include
+
+
+sitemap.xml e il conteggio articoli in Readme.md) sta in _progetto/03-manutenzione-diario.md.
 Modificare la sezione Chi sono
 1. GitHub → index.html → matita
 2. Cerca <!-- ==================== CHI SONO ==================== -->
@@ -476,7 +509,7 @@ Item
 	✅
 	Cloudflare Web Analytics attivo
 	✅
-	49 articoli mappati
+	Articoli mappati (49 al lancio; il conteggio corrente sta in _progetto/02-quadro-operativo.md)
 	✅
 	2 PDF opere scaricabili
 	✅

@@ -21,7 +21,7 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 - **HTML/CSS/JS statici** — nessun framework, nessuna build chain
 - **Cloudflare Pages** — hosting (deploy automatico da GitHub)
 - **Cloudflare DNS** — gestione DNS
-- **Cloudflare Web Analytics** — statistiche privacy-first (no cookie, no banner)
+- **Cloudflare Web Analytics** — statistiche privacy-first (no cookie, no banner). Beacon iniettato automaticamente lato edge: **nessun tag nel codice**, aggiungerne farebbe contare due volte le visite
 - **Google Fonts** — Spectral, Inter, JetBrains Mono
 - **Schema.org JSON-LD** — structured data per SEO
 
@@ -54,9 +54,10 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 
 ### Aggiungere un articolo al Diario
 
-1. Apri `index.html` su GitHub (matita / Edit)
-2. Trova la sezione `const articles = [`
-3. Aggiungi un nuovo elemento all'array:
+> Procedura completa e autorevole: `03-manutenzione-diario.md` nella cartella di progetto su Drive (`Il mio Drive/110 - Progetti/LG - IA Web Site/_progetto/`). Quella qui sotto ne è la sintesi: se le due divergono, vale quella.
+
+1. Apri `index.html`, trova `const articles = [`
+2. Aggiungi il record **in coda** all'array (ordine cronologico crescente: il render fa `reverse()`):
 
 ```javascript
 {
@@ -68,10 +69,13 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 }
 ```
 
-4. Aggiorna il counter nel footer e nei diary-stats se cambia il totale
-5. Commit → deploy automatico su Cloudflare Pages
+3. Aggiorna in `index.html` i `diary-stats` (contatore articoli e contatore mesi) e il footer (`<time datetime>` e `NN articoli`)
+4. Aggiorna `sitemap.xml`: `<lastmod>` della home = data dell'ultimo articolo
+5. Aggiorna il conteggio articoli in **questo** file (sezione Descrizione)
+6. Verifica: array parsabile, ordine cronologico, nessun tag privo di bottone filtro
+7. Commit → deploy automatico su Cloudflare Pages
 
-### Tag disponibili (10 totali)
+### Tag disponibili (10 totali — tassonomia chiusa)
 
 `governance` · `riflessioni` · `ambiente-cognitivo` · `lavoro` · `tecnica` · `responsabilità` · `educazione` · `creatività` · `libertà` · `coscienza-relazione`
 
