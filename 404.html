@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina non trovata — Luca Giuman</title>
+<meta name="description" content="L'indirizzo richiesto non corrisponde a nessuna pagina di lucagiuman.eu.">
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="preload" href="/assets/fonts/spectral-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+  :root {
+    --bg-deepest: #050608;
+    --bg: #0A0C10;
+    --text: #F5F3ED;
+    --text-muted: #B5B0A3;
+    --text-faint: #6B6862;
+    --text-faintest: #3D3B36;
+    --border: rgba(180, 175, 160, 0.12);
+    --border-strong: rgba(180, 175, 160, 0.25);
+    --accent-cyan: #7DD3D8;
+    --accent-violet: #A78BD9;
+    --accent-cyan-dim: rgba(125, 211, 216, 0.35);
+    --accent-violet-dim: rgba(167, 139, 217, 0.3);
+    --moonlight: #E8E2D0;
+    --serif: 'Spectral', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --max-width: 1320px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-deepest);
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+  html { overflow-x: hidden; max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+  .bg-image {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("/assets/sfondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.4;
+    filter: contrast(0.95) brightness(0.8);
+  }
+  .bg-veil {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at top, rgba(10,12,16,0.4) 0%, rgba(10,12,16,0.9) 60%, rgba(5,6,8,0.97) 100%),
+      linear-gradient(180deg, rgba(5,6,8,0.5) 0%, rgba(5,6,8,0.8) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  header, main { position: relative; z-index: 10; }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,6,8,0.92);
+    backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  .brand-mark {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin-right: 14px;
+    box-shadow: 0 0 20px rgba(125, 211, 216, 0.15);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  nav a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: color 0.3s;
+  }
+  nav a:hover, nav a.current { color: var(--accent-cyan); }
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .legal-page {
+    padding: 100px 0 120px;
+    min-height: calc(100vh - 200px);
+  }
+  .legal-header {
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .legal-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 12px var(--accent-cyan-dim);
+  }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--accent-cyan);
+  }
+  h1.legal-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    color: var(--moonlight);
+  }
+  h1.legal-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent-violet);
+  }
+  .legal-update {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-faint);
+    margin-top: 32px;
+  }
+  .legal-content {
+    max-width: 760px;
+  }
+  .legal-content h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--accent-cyan);
+    margin: 56px 0 16px;
+    letter-spacing: -0.01em;
+    padding-left: 20px;
+    position: relative;
+  }
+  .legal-content h2:first-of-type { margin-top: 0; }
+  .legal-content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 12px;
+    height: 1px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan-dim);
+  }
+  .legal-content p {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-weight: 300;
+  }
+  .legal-content a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-cyan-dim);
+    transition: all 0.3s;
+  }
+  .legal-content a:hover {
+    border-bottom-color: var(--accent-cyan);
+  }
+  .legal-back {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-back a {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--accent-cyan);
+  }
+  footer {
+    background: var(--bg-deepest);
+    padding: 60px 0 32px;
+    border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+  }
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--text-faint);
+  }
+  .footer-inner a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-faintest);
+  }
+  .footer-inner a:hover { color: var(--accent-cyan); }
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--bg-deepest);
+    color: var(--accent-cyan);
+    padding: 12px 20px;
+    z-index: 1000;
+    border: 1px solid var(--accent-cyan);
+    font-family: var(--mono);
+    font-size: 12px;
+    text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 16px; left: 16px; }
+  /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+  @media (max-width: 1024px) {
+    .container { padding: 0 28px; }
+  }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 28px; }
+    .header-inner { padding: 18px 28px; }
+    .legal-page { padding: 80px 0 100px; }
+    nav ul { gap: 20px; }
+    nav a { font-size: 10px; letter-spacing: 0.15em; }
+    h1.legal-title { font-size: clamp(32px, 8vw, 48px); }
+    .legal-content h2 { font-size: 21px; }
+    .legal-content p { font-size: 16px; }
+  }
+
+  @media (max-width: 560px) {
+    .container { padding: 0 20px; }
+    .header-inner { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+    .brand { font-size: 16px; }
+    .brand-mark { width: 32px; height: 32px; font-size: 13px; margin-right: 10px; }
+    nav ul { gap: 16px; flex-wrap: wrap; }
+    nav a { font-size: 9px; }
+    .legal-page { padding: 60px 0 80px; }
+    .legal-header { padding-bottom: 36px; margin-bottom: 48px; }
+    .legal-content h2 { font-size: 20px; margin: 40px 0 14px; }
+  }
+
+  @media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .header-inner { padding: 14px 16px; }
+    .brand { font-size: 14px; }
+    nav ul { gap: 12px; }
+    nav a { font-size: 8px; letter-spacing: 0.1em; }
+    .legal-content p { font-size: 15px; }
+  }
+</style>
+<style>
+  /* 404 — piccole aggiunte sopra lo stile delle pagine legali */
+  .error-code {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+  }
+  .error-actions {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+  .error-actions ul {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+  }
+  .error-actions a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .error-actions a:hover,
+  .error-actions a:focus-visible {
+    color: var(--accent-cyan);
+    border-bottom-color: var(--accent-cyan-dim);
+  }
+  .error-home {
+    display: inline-block;
+    margin-top: 28px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-cyan-dim);
+  }
+  .error-home:hover { color: var(--moonlight); border-bottom-color: var(--moonlight); }
+</style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Salta al contenuto principale</a>
+
+<div class="bg-image" aria-hidden="true" role="presentation"></div>
+<div class="bg-veil" aria-hidden="true" role="presentation"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">LG</span>Luca Giuman
+    </a>
+    <nav aria-label="Navigazione principale">
+      <ul>
+        <li><a href="/#opere">Opere</a></li>
+        <li><a href="/#diario">Diario</a></li>
+        <li><a href="/#about">Chi sono</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="legal-page">
+  <div class="container">
+    <div class="legal-header">
+      <div class="section-eyebrow">Errore</div>
+      <h1 class="legal-title">Pagina <em>non trovata</em></h1>
+      <div class="legal-update error-code">HTTP 404</div>
+    </div>
+    <div class="legal-content">
+
+<p>L'indirizzo richiesto non corrisponde a nessuna pagina di questo sito. Può essere un collegamento non più valido, un refuso nell'indirizzo, o una pagina che non è mai esistita.</p>
+
+<p>Non c'è molto da cercare altrove: <strong>il sito è una pagina sola</strong>, divisa in tre sezioni.</p>
+
+<div class="error-actions">
+  <ul>
+    <li><a href="/#opere">01 · Opere</a></li>
+    <li><a href="/#diario">02 · Diario</a></li>
+    <li><a href="/#about">03 · Chi sono</a></li>
+  </ul>
+  <a class="error-home" href="/">Torna alla home</a>
+</div>
+
+    </div>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© MMXXVI · Luca Giuman</div>
+    <div><a href="/privacy/">Privacy</a> · <a href="/note-legali/">Note legali</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
