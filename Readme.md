@@ -22,7 +22,7 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 - **Cloudflare Pages** — hosting (deploy automatico da GitHub)
 - **Cloudflare DNS** — gestione DNS
 - **Cloudflare Web Analytics** — statistiche privacy-first (no cookie, no banner). Beacon iniettato automaticamente lato edge: **nessun tag nel codice**, aggiungerne farebbe contare due volte le visite
-- **Font self-hosted** (`assets/fonts/`, licenze OFL incluse) — Spectral, Inter, JetBrains Mono: nessuna chiamata a CDN di terzi
+- **Font self-hosted** (`assets/fonts/`, licenze OFL incluse) — Bricolage Grotesque, Instrument Sans, JetBrains Mono: nessuna chiamata a CDN di terzi
 - **Schema.org JSON-LD** — structured data per SEO
 
 ## Struttura
@@ -41,13 +41,12 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 ├── _redirects              # Cloudflare redirect rules
 ├── Deploy.md               # Storia del deploy iniziale (documento congelato)
 ├── assets/
-│   ├── sfondo.jpg          # Immagine di sfondo
 │   ├── luca-giuman.png     # Foto profilo (+ .webp)
 │   ├── og-image.png        # Anteprima social 1200×630
 │   ├── favicon.ico         # Favicon multi-size
 │   ├── favicon-*.png       # Favicon variants
 │   ├── apple-touch-icon.png
-│   ├── fonts/              # 26 .woff2 + fonts.css + licenze OFL
+│   ├── fonts/              # 8 .woff2 + fonts.css + licenze OFL
 │   └── js/                 # pdf.js per il lettore
 └── pdf/
     ├── libro-versione-1.pdf
