@@ -128,7 +128,7 @@
   };
 
   const params = new URLSearchParams(location.search);
-  const slug = params.get('opera');
+  const slug = (params.get('opera') || '').replace(/\.pdf$/i, '');
   const opera = opere[slug];
 
   if (!opera) { location.href = '/'; return; }

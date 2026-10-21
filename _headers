@@ -9,5 +9,5 @@
   Cache-Control: public, max-age=31536000, immutable
 /pdf/*
   Cache-Control: public, max-age=604800
-/*.html
-  Cache-Control: public, max-age=300, must-revalidate
+/*.md
+  X-Robots-Tag: noindex
