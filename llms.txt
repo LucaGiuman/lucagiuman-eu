@@ -1,0 +1,26 @@
+# Luca Giuman — L'IA come ambiente cognitivo
+
+> Sito autoriale di Luca Giuman, che si occupa di intelligenza artificiale dal 1985. Una pagina unica raccoglie le opere scaricabili e il diario di ricerca sull'IA come ambiente cognitivo; gli articoli integrali sono pubblicati su LinkedIn.
+
+Il sito ha tre sezioni: Opere, Diario, Chi sono. I testi integrali ospitati sul dominio sono i quattro PDF elencati qui sotto, tutti in italiano.
+
+## Opere
+
+- [Quando la tecnologia smette di essere uno strumento](https://lucagiuman.eu/pdf/libro-versione-1.pdf): saggio narrativo in cinque atti, 2024. Una prima esplorazione dell'IA come ambiente abitato, in registro narrativo ed esperienziale.
+- [Forza, Ambiente, Libertà](https://lucagiuman.eu/pdf/forza-ambiente-liberta.pdf): trattato teorico in sedici capitoli, 2025. La dimostrazione formale che l'IA opera come forza naturale e genera un ambiente cognitivo.
+- [Critto-fantasia](https://lucagiuman.eu/pdf/critto-fantasia.pdf): saggio breve, 2026, sull'etica dell'immaginazione digitale e sull'oblio come architettura intenzionale.
+- [Intervista · La Piazza Web](https://lucagiuman.eu/pdf/intervista-la-piazza-web.pdf): intervista all'autore.
+
+## Diario
+
+- [Diario di ricerca](https://lucagiuman.eu/#diario): indice ragionato degli articoli, con data, estratto e tema; un articolo ogni due settimane dal 29 agosto 2024. I testi integrali sono su LinkedIn.
+- [Profilo LinkedIn](https://it.linkedin.com/in/lucagiuman): dove gli articoli sono pubblicati.
+
+## Chi sono
+
+- [Chi sono](https://lucagiuman.eu/#about): profilo dell'autore, CEO di SerenDPT e membro del CDA di EGGON.
+
+## Optional
+
+- [Privacy Policy](https://lucagiuman.eu/privacy/)
+- [Note legali](https://lucagiuman.eu/note-legali/)

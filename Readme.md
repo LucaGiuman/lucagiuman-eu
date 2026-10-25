@@ -35,10 +35,14 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 ├── leggi.html              # Lettore PDF in pagina (noindex)
 ├── 404.html                # Pagina d'errore (noindex)
 ├── robots.txt              # Regole crawler
+├── llms.txt                # Descrizione del sito per sistemi di IA (URL stabili)
 ├── sitemap.xml             # Mappa URL per motori di ricerca
 ├── manifest.json           # PWA manifest
 ├── _headers                # Cloudflare security headers
 ├── _redirects              # Cloudflare redirect rules
+├── .well-known/
+│   └── security.txt        # Contatto per segnalazioni di sicurezza (RFC 9116, scade ogni anno)
+├── google2a0a220cec82cf22.html  # Verifica della proprietà Search Console
 ├── Deploy.md               # Storia del deploy iniziale (documento congelato)
 ├── assets/
 │   ├── luca-giuman.png     # Foto profilo (+ .webp)
