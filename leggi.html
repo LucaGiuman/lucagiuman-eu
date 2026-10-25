@@ -199,10 +199,12 @@
       });
     }
 
-    // Renderizza pagine in sequenza
+    // Renderizza pagine in sequenza: l'errore di una pagina non ferma le successive
     (function renderNext(n) {
       if (n > total) return;
-      renderPage(n).then(function() { renderNext(n + 1); });
+      renderPage(n).catch(function(err) {
+        console.warn('Pagina ' + n + ' non resa per intero:', err);
+      }).then(function() { renderNext(n + 1); });
     })(1);
 
   }).catch(function() {
