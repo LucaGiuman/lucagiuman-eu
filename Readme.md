@@ -74,7 +74,7 @@ Non è un blog. È un *diario di ricerca pubblico* — uno snodo che rimanda ai 
 }
 ```
 
-3. Aggiorna a mano in `index.html` i due blocchi di contatori statici — `.counters` in apertura (articoli, mesi, temi, PDF scaricabili) e `.diario-stats` in testa al Diario (mesi, temi) — e la data del footer (`<time datetime>`). Mesi = distanza dal primo articolo, 2024-08-29, arrotondata per difetto. Non toccare ciò che il JavaScript calcola dall'array: numero di voci, data dell'ultima voce, pesi dei temi
+3. Aggiorna a mano in `index.html` i due blocchi di contatori statici — `.counters` in apertura (articoli, mesi, temi, PDF scaricabili) e `.diario-stats` in testa al Diario (mesi, temi) — e la data del footer (`<time datetime>`). Mesi = distanza dal primo articolo, 2024-08-29, arrotondata per difetto. Aggiorna anche i valori di riserva di ciò che il JavaScript ricalcola dall'array — numero di voci (`#stat-voci`), data dell'ultima voce (`#status-ultima`), pesi dei temi (`#temi-pesi`) — scrivendo esattamente ciò che il calcolo produce: li legge chi non esegue il JavaScript
 4. Aggiorna `sitemap.xml`: `<lastmod>` della home = data dell'ultimo articolo
 5. Aggiorna il conteggio articoli in **questo** file (sezione Descrizione)
 6. Verifica: array parsabile, ordine cronologico, nessun tag privo di bottone filtro
